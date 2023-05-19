@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>CALCULADORA DE VECTORES!</h1>
+  </header>
+  <main>
+    <form id="formulario">
+      <label for="num-dimensiones">Número de dimensiones:</label>
+      <select id="num-dimensiones">
+        <option value="2">2D</option>
+        <option value="3">3D</option>
+      </select>
+      <div id="coordenadas-2d">
+        <label for="x-2d">Coordenada x:</label>
+        <input type="number" id="x-2d">
+        <label for="y-2d">Coordenada y:</label>
+        <input type="number" id="y-2d">
+        <p id="cuadrante"></p>
+      </div>
+      <div id="coordenadas-3d" style="display: none;">
+        <label for="x-3d">Coordenada x:</label>
+        <input type="number" id="x-3d">
+        <label for="y-3d">Coordenada y:</label>
+        <input type="number" id="y-3d">
+        <label for="z-3d">Coordenada z:</label>
+        <input type="number" id="z-3d">
+      </div>
+      <button type="submit" id="btn-calcular">Calcular</button>
+      <button type="submit" id="LimpiarCalculadora" onclick="limpiarCalculadora()">Limpiar</button>
+    </form>
+    <div id="resultado">
+      <p id="magnitud"></p>
+      <p id="formula-magnitud" style="display: none;">Fórmula: √(x² + y² + z²)</p>
+      <p id="angulo" style="display: none;"></p>
+      <p id="cuadrante-2d" style="display: none;"></p>
+      <p id="cosenos" style="display: none;"></p>
+      <p id="vector-unitario" style="display: none;"></p>
+      <p id="direccion" style="display: none;"></p>
+      <p id="formula-angulo" style="display: none;">Fórmula: atan(y/x) o atan(sqrt(x² + y²)/z)</p>
+      <p id="formula-cuadrante" style="display: none;">Fórmula: Determinado por los signos de x e y</p>
+      <p id="formula-cosenos" style="display: none;">Fórmula: cos(θ) = x / magnitud, cos(φ) = y / magnitud, cos(λ) = z / magnitud</p>
+      <p id="formula-vector-unitario" style="display: none;">Fórmula: (x / magnitud)i + (y / magnitud)j + (z / magnitud)k</p>
+      <p id="formula-direccion" style="display: none;">Fórmula: Ángulo entre el vector y el eje x, y el ángulo entre el vector y el eje xy</p>
+    </div>
+    
+
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
